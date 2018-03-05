@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_base_head"
+    android:layout_width="match_parent"
+    android:layout_height="48dip"
+    android:background="#0195ff">
+
+
+    <Button
+        android:id="@+id/btn_left"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/ny_selector_btn_back"
+        android:drawableLeft="@drawable/ny_ac_back_icon"
+        android:gravity="center_vertical"
+        android:onClick="onHeadLeftButtonClick"
+        android:textColor="@drawable/ny_selector_btn_top" />
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="1dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:background="#0083e0" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="12dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:text="adfadf"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_right"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@null"
+        android:maxLines="1"
+        android:onClick="onHeadRightButtonClick"
+        android:textColor="@drawable/ny_selector_btn_top" />
+
+    <TextView
+        android:id="@+id/text_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:clickable="true"
+        android:maxLines="1"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

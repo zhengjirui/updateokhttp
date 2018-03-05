@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+
+//http://blog.csdn.net/f917386389/article/details/52121809
+//com.zhjirui.utils:okhttp3.4.1:1.0.0
+ext{
+    PUBLISH_GROUP_ID = 'com.zhjirui.utils'
+    PUBLISH_ARTIFACT_ID = 'okhttp3.4.1'
+    PUBLISH_VERSION = '1.0.0'
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.google.code.gson:gson:2.4'
+//    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+
+}
+
+/** 以下开始是将Android Library上传到jcenter的相关配置**/
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
